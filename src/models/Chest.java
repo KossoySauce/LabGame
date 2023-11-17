@@ -1,26 +1,26 @@
 public class Chest extends Entity{
 
 	private boolean open = false; 
-	private Items[] storage;
+	private ITEM store; //a chest can hold a singular item
 
 	public Chest(String sprite){
 		super(sprite, false);
 	}
 
-	public boolean getOpen(){
+	public boolean isOpen(){
 		return open;
 	}
 
-	public void setOpen(boolean open){
-		this.open = open;
+	public void openChest(){
+		open = true;
 	}
 
-	public Items[] getItems(){
-		return storage;
+	public ITEM getItem(){
+		return store;
 	}
 
-	public void setItems(Items[] storage){
-		this.storage = storage;
+	public void setItem(ITEM store){
+		this.store = store;
 	}
 
 }

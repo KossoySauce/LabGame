@@ -1,40 +1,43 @@
+import java.util.*;
 public class Player extends Character{
 
-	private ArrayList<Items> invintory = new ArrayList<>();
+	private ArrayList<ITEM> invintory = new ArrayList<>();
 
-	public Player(String sprite, Items[] i){
+	public Player(String sprite, ITEM i){
 		super(sprite);
-		invintory.addItems(i);
+		addItem(i);
 	}
 
-	public Player(Stirng sprite){
+	public Player(String sprite){
 		super(sprite);
 	}
 
-	public void setInvintory(ArrayList<Items> invintory){
-		this.invintory = invintory;
-	}
-
-	public ArrayList<Items> getInvintory(){
+	public ArrayList<ITEM> getInvintory(){
 		return invintory;
 	}	
 
-	public void addItems(Items[] it){
-		for(int i=0;i<it.length;i++){
-			invintory.add(it[i]);
-		}
+	public void setInvintory(ArrayList<ITEM> invintory){
+		this.invintory=invintory;
 	}
 
-	public void addItem(Items i){
+	public void addItem(ITEM i){
 		invintory.add(i);
 	}
 
-	public void removeItem(int i){
+	public void removeItem(ITEM i){
 		invintory.remove(i);
 	}
 
-	public void removeItem(Items i){
-		invintory.remove(i);
+	public boolean hasStick(){
+		return invintory.contains(ITEM.stick);
 	}
-
+	public boolean hasSword(){
+		return invintory.contains(ITEM.sword);
+	}
+	public boolean hasPotion(){
+		return invintory.contains(ITEM.potion);
+	}
+	public boolean hasKey(){
+		return invintory.contains(ITEM.key);
+	}
 }

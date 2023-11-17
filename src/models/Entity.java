@@ -2,6 +2,7 @@ public abstract class Entity{
 
 	private String sprite;
 	private boolean passable;
+	private boolean visible = false;
 
 	public Entity(String sprite, boolean passable){
 		this.sprite = sprite;
@@ -22,6 +23,18 @@ public abstract class Entity{
 
 	public void setPassable(boolean passable){
 		this.passable = passable;
+	}
+
+	public String toString(){
+		return sprite;
+	}
+
+	public boolean isVisible(){
+		return visible;
+	}
+
+	public void makeVisble(){
+		visible = true;
 	}
 
 }
