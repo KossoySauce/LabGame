@@ -7,36 +7,40 @@ public class Character extends Entity{
 		super(sprite,false);
 	}
 
-	private int getXP(){
+	public int getXP(){
 		return xp;
 	}
 
-	private void setXP(int xp){
+	public void setXP(int xp){
 		this.xp = xp;
 	}
 
-	private void addXP(int a){
+	public void addXP(int a){
 		xp = xp + a;
 	}
 
-	private void subXP(int a){
+	public void subXP(int a){
 		xp = xp - a;
 	}
 
-	private int getHealth(){
+	public int getHealth(){
 		return health;
 	}
 
-	private void setHealth(int health){
+	public void setHealth(int health){
 		this.health = health;
 	}
 
-	private void addHealth(int a){
+	public void addHealth(int a){
 		health = health + a;
 	}
 
-	private void subHelath(int a){
+	public void subHealth(int a){
 		health = health - a;
+	}
+
+	public void printStats(){
+		System.out.println("Player has "  + health + " health");
 	}
 
 }

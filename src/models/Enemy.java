@@ -1,12 +1,9 @@
 public class Enemy extends Character{
-
 	private int level;
-
-	public Enemy(String sprite,int level){
+	public Enemy(String sprite){
 		super(sprite);
-		this.level = level;
+		super.setRefNum(4);
 	}
-
 	public void setLevel(int level){
 		this.level=level;
 	}

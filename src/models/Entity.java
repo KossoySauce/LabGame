@@ -3,10 +3,18 @@ public abstract class Entity{
 	private String sprite;
 	private boolean passable;
 	private boolean visible = false;
+	private int refNum;
 
 	public Entity(String sprite, boolean passable){
 		this.sprite = sprite;
 		this.passable = passable;
+	}
+
+	public int getRefNum(){
+		return refNum;
+	}
+	public void setRefNum(int refNum){
+		this.refNum = refNum;
 	}
 
 	public String getSprite(){

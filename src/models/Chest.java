@@ -5,7 +5,9 @@ public class Chest extends Entity{
 
 	public Chest(String sprite){
 		super(sprite, false);
+		super.setRefNum(3);
 	}
+		
 
 	public boolean isOpen(){
 		return open;

@@ -2,6 +2,7 @@ import java.util.*;
 public class Player extends Character{
 
 	private ArrayList<ITEM> invintory = new ArrayList<>();
+	private boolean hasKey = false;
 
 	public Player(String sprite, ITEM i){
 		super(sprite);
@@ -10,12 +11,17 @@ public class Player extends Character{
 
 	public Player(String sprite){
 		super(sprite);
+		super.setRefNum(5);
 	}
 
 	public ArrayList<ITEM> getInvintory(){
 		return invintory;
 	}	
-
+	
+	public void getKey(){
+		hasKey = true;
+	}
+	
 	public void setInvintory(ArrayList<ITEM> invintory){
 		this.invintory=invintory;
 	}
@@ -38,6 +44,7 @@ public class Player extends Character{
 		return invintory.contains(ITEM.potion);
 	}
 	public boolean hasKey(){
-		return invintory.contains(ITEM.key);
+		return hasKey;
 	}
 }
+
